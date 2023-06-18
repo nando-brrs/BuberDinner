@@ -1,0 +1,24 @@
+@host = https://localhost:7034
+@hostId = 123456789
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzZGE5NDg0Zi05OTAyLTQ0MjItOWYyNi04MTJmZDMwYTJjOGIiLCJnaXZlbl9uYW1lIjoiQm9iIiwiZmFtaWx5X25hbWUiOiJNYXJ0aW4iLCJqdGkiOiIwMWQ5YjQ0ZC0yZDA4LTRhYTUtYmUzYS0yYjFiM2E3ODMyNDUiLCJleHAiOjE2Njk5MTk0ODgsImlzcyI6IkJ1YmVyRGlubmVyIiwiYXVkIjoiQnViZXJEaW5uZXIifQ.MB1wqDjSKZDO-veJmIGku0bMTTOJUH4Ez8rf7a1ugXo
+
+POST {{host}}/hosts/{{hostId}}/menus
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name" : "Menu dayly",
+    "description" : "Dayli menu",
+    "sections" : [
+        {
+            "name" : "section 1",
+            "description" : "Some description",
+            "items": [
+                {
+                    "name" : "Nuggets",
+                    "description" : "deep nuggets"
+                }
+            ]
+        }
+    ]
+}

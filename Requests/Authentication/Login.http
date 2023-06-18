@@ -1,0 +1,7 @@
+POST  https://localhost:7034/auth/login
+Content-Type: application/json
+
+{
+    "email": "anichai@mantiband.com",
+    "password": "Anilo1232!"
+}
