@@ -1,17 +1,17 @@
 using BuberDinner.Domain.Common.Models;
 
-namespace BuberDinner.Domain.Dinners.ValueObjects;
+namespace BuberDinner.Domain.Bills.ValueObjects;
 
-public sealed class DinnerId : ValueObject
+public sealed class BillId : ValueObject
 {
     public Guid Value { get; }
 
-    private DinnerId(Guid value)
+    private BillId(Guid value)
     {
         Value = value;
     }
 
-    public static DinnerId CreateUnique()
+    public static BillId CreateUnique()
     {
         return new(Guid.NewGuid());
     }

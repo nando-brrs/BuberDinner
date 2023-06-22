@@ -1,5 +1,5 @@
 
-using BubeerDinner.Domain.Entities;
+using BubeerDinner.Domain.Users;
 using BuberDinner.Application.Common.Interfaces.Authentication;
 using BuberDinner.Application.Services.Authentication.Common;
 using ErrorOr;

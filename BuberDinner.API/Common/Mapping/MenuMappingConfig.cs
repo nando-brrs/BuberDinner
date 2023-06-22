@@ -12,7 +12,7 @@ public class MenuMappingConfig : IRegister
 {
     public void Register(TypeAdapterConfig config)
     {
-        config.NewConfig<(CreateMenuRequest request, string hostId), CreateMenuCommand>()
+        config.NewConfig<(CreateMenuRequest request, Guid hostId), CreateMenuCommand>()
             .Map(dest => dest.HostId, src => src.hostId)
             .Map(dest => dest, src => src.request);
 
@@ -27,7 +27,7 @@ public class MenuMappingConfig : IRegister
 
         config.NewConfig<MenuSection, MenuSectionResponse>()
             .Map(dest => dest.Id, src => src.Id.Value)
-            .Map(dest => dest.Items, src => src.MenuItems);
+            .Map(dest => dest.Items, src => src.Items);
 
         config.NewConfig<MenuItem, MenuItemResponse>()
             .Map(dest => dest.Id, src => src.Id.Value);

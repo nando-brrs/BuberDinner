@@ -2,7 +2,7 @@
 
 using BubeerDinner.Application.Common.Interfaces.Persistence;
 using BubeerDinner.Domain.Common.Errors;
-using BubeerDinner.Domain.Entities;
+using BubeerDinner.Domain.Users;
 using BuberDinner.Application.Common.Interfaces.Authentication;
 using BuberDinner.Application.Services.Authentication.Common;
 using BuberDinner.Application.Services.Authentication.Queries;

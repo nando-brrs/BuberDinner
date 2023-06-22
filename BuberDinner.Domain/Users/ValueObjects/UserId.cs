@@ -1,17 +1,17 @@
 using BuberDinner.Domain.Common.Models;
 
-namespace BuberDinner.Domain.Dinners.ValueObjects;
+namespace BuberDinner.Domain.Users.ValueObjects;
 
-public sealed class DinnerId : ValueObject
+public sealed class UserId : ValueObject
 {
     public Guid Value { get; }
 
-    private DinnerId(Guid value)
+    private UserId(Guid value)
     {
         Value = value;
     }
 
-    public static DinnerId CreateUnique()
+    public static UserId CreateUnique()
     {
         return new(Guid.NewGuid());
     }
@@ -20,4 +20,7 @@ public sealed class DinnerId : ValueObject
     {
         yield return Value;
     }
+
+    public static implicit operator Guid(UserId data)
+        => data.Value;
 }

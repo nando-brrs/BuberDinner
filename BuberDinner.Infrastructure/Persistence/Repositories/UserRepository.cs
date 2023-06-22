@@ -1,9 +1,8 @@
 
 using BubeerDinner.Application.Common.Interfaces.Persistence;
-using BubeerDinner.Domain.Entities;
+using BubeerDinner.Domain.Users;
 
-namespace BubeerDinner.Infrastructure.Persistence;
-
+namespace BuberDinner.Infrastructure.Persistence.Repositories;
 public class UserRepository : IUserRepository
 {
     private readonly List<User> _users = new();
