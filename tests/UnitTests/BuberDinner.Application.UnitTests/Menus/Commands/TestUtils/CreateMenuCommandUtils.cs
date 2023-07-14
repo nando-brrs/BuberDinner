@@ -10,7 +10,7 @@ public class CreateMenuCommandUtils
     //list of sections
     public static CreateMenuCommand CreateCommand(List<MenuSectionCommand>? sections = null)
         => new CreateMenuCommand(
-        new Guid(Constants.Host.Id.ToString()!),
+        new Guid(Constants.Host.Id.Value.ToString()!),
         Constants.Menu.Name,
         Constants.Menu.Description,
         sections ?? CreateSectionsCommands()
